@@ -69,13 +69,15 @@ namespace P02
                     int ascii;
                     if (value < podmVelke) ascii = value + 26 - (counter * posun) + (((counter * posun) / 26) * 26);
                     else ascii = value - counter * posun + (((counter * posun) / 26) * 26);
+                    if (posun >= 26) ascii -= (posun / 26) * 26;
                     newchain += (char)ascii;
                 }
                 else if (value >= 'a' && value <= 'z')
                 {
                     int ascii;
-                    if (value < podmMale) ascii = value + 26 - counter * posun + (((counter * posun) / 26) * 26);
+                    if (value < podmMale) ascii = value + 26 - (counter * posun) + (((counter * posun) / 26) * 26);
                     else ascii = value - counter * posun + (((counter * posun) / 26) * 26);
+                    if (posun >= 26) ascii -= (posun / 26) * 26;
                     newchain += (char)ascii;
                 }
                 else newchain += value;
