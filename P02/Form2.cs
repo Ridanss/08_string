@@ -31,14 +31,14 @@ namespace P02
                 if (value >= 'A' && value <= 'Z')
                 {
                     int ascii;
-                    if (value > podmVelke) ascii = value - 26 + posun;
+                    if (value > podmVelke) ascii = value - ((posun / 26) * 26) + posun;
                     else ascii = value + posun;
                     newchain += (char)ascii;
                 }
                 else if (value >= 'a' && value <= 'z')
                 {
                     int ascii;
-                    if (value > podmMale) ascii = value - 26 + posun;
+                    if (value > podmMale) ascii = value - ((posun / 26) * 26) + posun;
                     else ascii = value + posun;
                     newchain += (char)ascii;
                 }
