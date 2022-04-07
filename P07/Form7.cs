@@ -27,6 +27,7 @@ namespace P07
             foreach (char value in chain)
             {
                 if (value == ' ') newchain += "/ ";
+                else if (value == '.') newchain += "// ";
                 else
                 {
                     for (int i = 0; i < alphabet.Length; i++)
@@ -52,6 +53,7 @@ namespace P07
             foreach (string value in chain)
             {
                 if (value == "/") newchain += " ";
+                else if (value == "//") newchain += ". ";
                 else
                 {
                     for (int i = 0; i < morse.Length; i++)
