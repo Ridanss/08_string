@@ -20,10 +20,6 @@ namespace P10
         private void buttonExecute_Click(object sender, EventArgs e)
         {
             string chain = textBox1.Text;
-            while (chain.Contains("  "))
-            {
-                chain = chain.Replace("  ", " ");
-            }
             string[] values = chain.Split(' ');
             foreach (string value in values)
             {
