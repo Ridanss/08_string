@@ -28,8 +28,7 @@ namespace P09
                     if (checkBoxUpper.Checked)
                     {
                         newchain += char.ToUpper(chain[0]).ToString();
-                        chain = chain.Remove(0, 1);
-                        newchain += chain;
+                        newchain += chain.Substring(1);
                     }
                     if (checkBoxDot.Checked)
                     {
