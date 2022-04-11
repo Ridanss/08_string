@@ -19,11 +19,29 @@ namespace P09
 
         private void buttonCorrect_Click(object sender, EventArgs e)
         {
+            string chain = string.Empty, newchain = string.Empty;
             for (int i = 0; i < textBox1.Lines.Count(); i++)
-            {
-                string chain = textBox1.Lines[i];
-                
+            { 
+                chain = textBox1.Lines[i];
+                if (chain != string.Empty) {
+                    chain = chain.Trim();
+                    if (checkBoxUpper.Checked)
+                    {
+                        newchain += char.ToUpper(chain[0]).ToString();
+                        chain = chain.Remove(0, 1);
+                        newchain += chain;
+                    }
+                    if (checkBoxDot.Checked)
+                    {
+                        if (chain != string.Empty)
+                        {
+                            if (chain[chain.Length - 1] != '.') newchain += '.';
+                        }
+                    }
+                    newchain += Environment.NewLine;
+                }
             }
+            textBox1.Text = newchain;
         }
     }
 }
