@@ -32,10 +32,7 @@ namespace P09
                     }
                     if (checkBoxDot.Checked)
                     {
-                        if (chain != string.Empty)
-                        {
-                            if (chain[chain.Length - 1] != '.') newchain += '.';
-                        }
+                        if (chain[chain.Length - 1] != '.') newchain += '.';
                     }
                     newchain += Environment.NewLine;
                 }
